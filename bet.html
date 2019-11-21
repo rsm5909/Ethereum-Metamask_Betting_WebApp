@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	{% load static %}
+	<script src="{% static "eth/eth.js" %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'eth/eth.css' %}">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/buttons-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/tables-min.css">
+  
+  <div class="topnav">
+    <a class="active" href="{% url 'bet' %}">Bet</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'contact' %}">Contact</a>
+  </div>
+  
+  <body style="background-image: url({% static 'images/space.jpeg' %}); height:100%; background-position: center;background-repeat: no-repeat;background-size: cover;">
+    <div class="center" style="width:100%">
+      <h1 style="color:#f2f2f2;">Welcome to StonkBets!</h1>
+    </div>
+    <div class="inset">
+      <strong id="userAddress">User Address:</strong>
+    </div>
+    <div style="padding:5px"></div>
+    <div class="inset2">
+      <strong id="contractAddress">Active Contract Address:</strong>
+    </div>
+    <div style="padding:10px"></div>
+    <div>
+      <div class="detaildiv">
+        <b>Active SPY Contract details:</b>
+        <div>
+          <table class="pure-table pure-table-horizontal" style="margin:auto">
+            <thead>
+              <tr>
+                <th>Over/Under</th>
+                <th>Expiry</th>
+                <th>Open Interest</th>
+                <th>Total Bullish</th>
+                <th>Total Bearish</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="strike">xxx</td>
+                <td id="deadline">xxx</td>
+                <td id="totalbets">xxx</td>
+                <td id="amt1">xxx</td>
+                <td id="amt2">xxx</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div style="padding:10px"></div>
+    <div class="detaildiv" style="height:70px">
+      <b>Bet Slip:</b>
+      <form id='frm1' class="pure-form" style="border-style: none">
+        <fieldset>
+          <label for="side">Bullish/Bearish: </label>
+          <select id="side">
+              <option>Bullish</option>
+              <option>Bearish</option>
+          </select>
+          <label>Wager Amount (ETH): </label>
+          <input id=wager type="text"></input>
+          <button class="pure-button pure-button-primary" onclick="placeBet()">Place Bet</button>
+        </fieldset>   
+      </form>
+    </div>
+    <button class="pure-button success" type="button" onclick="makeWin()">Make Win</button>
+  </body>
+</html>

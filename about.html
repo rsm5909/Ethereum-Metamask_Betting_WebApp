@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'eth/eth.css' %}">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/buttons-min.css">
+  
+  <div class="topnav">
+    <a href="{% url 'bet' %}">Bet</a>
+    <a class="active" href="{% url 'about' %}">About</a>
+    <a href="{% url 'contact' %}">Contact</a>
+  </div>
+  <body style="background-image: url({% static 'images/space.jpeg' %}); height:100%; background-position: center;background-repeat: no-repeat;background-size: cover;">
+    <div class="center" style="width:100%">
+      <h1 style="color:#f2f2f2;">About StonkBets</h1>
+    </div>
+    <div class="aboutMain">
+      <strong>What is StonkBets?</strong>
+      <p style="font-size: 17px">
+        StonkBets is a Decentralized App or 'DApp' that utilizes the Ethereum Blockchain and allows users to place a wager on the value of the SPDR S&P 500 ETF Trust being above or below a stated price at the time of expiration. Transactions require no trust between counterparties, as funds are held in escrow via a smart contract throughout the duration of the bet. 
+      </p>
+      <strong>How do I place a bet?</strong>
+      <p style="font-size: 17px">
+        First you must ensure that you're Etherueum wallet is connected to your browser (Check out the MetaMask extension for Chrome!). Once you have MetaMask installed, navigate to the 'Bet' page and enable the connection by clicking the metamask icon in your Chrome window, then click settings -> connections -> add the sites URL, then click connect. Once enabled, you should see your address in the bubble on the page. There is no need to supply your Private Keys as MetaMask handles transactions on the client side.
+      </p>
+      <p style="font-size: 17px">
+        After everything is connected, just place your wager denominated in ETH, click 'Place Bet', and complete the transaction in MetaMask. Upon expiration, prizes will be distributed to the winners.
+      </p>
+    </div>
+  </body>
+</html>

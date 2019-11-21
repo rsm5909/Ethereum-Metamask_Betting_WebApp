@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'eth/eth.css' %}">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/buttons-min.css">
+  <div class="topnav">
+      <a href="{% url 'bet' %}">Bet</a>
+      <a href="{% url 'about' %}">About</a>
+      <a class="active" href="{% url 'contact' %}">Contact</a>
+  </div>
+  <body style="background-image: url({% static 'images/space.jpeg' %}); height:100%; background-position: center;background-repeat: no-repeat;background-size: cover;">
+    <div class="center" style="width:100%">
+      <h1 style="color:#f2f2f2;">Contact Us</h1>
+    </div>
+    <div class="aboutMain">
+      <strong>Contact Methods:</strong>
+      <p style="font-size: 17px">
+        Email: rsm5909@gmail.com
+      </p>   
+      </div>
+    </body>
+</html>
